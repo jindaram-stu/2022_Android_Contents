@@ -41,7 +41,7 @@ public class ListViewActivity extends AppCompatActivity {
         listView.setAdapter(new BaseAdapter() {
 
             Context context = getApplicationContext();
-            LayoutInflater layoutInflater = LayoutInflater.from(context); // XML RESOURC를 메모리에 올려주는 얘
+            LayoutInflater layoutInflater = LayoutInflater.from(context); // XML RESOURC를 메모리에 올려주는 뿌잉
 
             @Override
             public int getCount() { // 총 ListData Array 크기 얻기
