@@ -16,8 +16,9 @@
             android:id="@+id/bt_calculator"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:text="계산기"
-            android:layout_marginTop="30dp"/>
+            android:text="@string/cal"
+            android:layout_marginTop="30dp"
+            />
 
         <Button
             android:id="@+id/bt_next"
@@ -48,6 +49,13 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:text="GUCCI LIST VIEW"
+            android:layout_marginTop="30dp"/>
+
+        <Button
+            android:id="@+id/bt_sp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="SHARED PREFERENCES"
             android:layout_marginTop="30dp"/>
 
 

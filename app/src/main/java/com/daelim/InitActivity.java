@@ -17,7 +17,7 @@ import com.daelim.survey.BreadActivity;
 public class InitActivity extends AppCompatActivity {
 
     InitActivity activity;
-    Button bt_calculator, bt_next, bt_survey, bt_listView;
+    Button bt_calculator, bt_next, bt_survey, bt_listView, bt_sp;
     TextView tv_value, tv_from;
 
 
@@ -42,6 +42,10 @@ public class InitActivity extends AppCompatActivity {
                     Intent listViewIntent = new Intent(activity, ListViewActivity.class);
                     startActivity(listViewIntent);
                     break;
+                case R.id.bt_sp:
+                    Intent spIntent = new Intent(activity, SharedPreferencesActivity.class);
+                    startActivity(spIntent);
+                    break;
             }
         }
     };
@@ -55,12 +59,14 @@ public class InitActivity extends AppCompatActivity {
         bt_next = findViewById(R.id.bt_next);
         bt_survey = findViewById(R.id.bt_survey);
         bt_listView = findViewById(R.id.bt_listview);
+        bt_sp = findViewById((R.id.bt_sp));
 
 
         bt_calculator.setOnClickListener(click);
         bt_next.setOnClickListener(click);
         bt_survey.setOnClickListener(click);;
         bt_listView.setOnClickListener(click);
+        bt_sp.setOnClickListener(click);
 
         tv_value = findViewById(R.id.tv_value);
         tv_from = findViewById(R.id.tv_from);

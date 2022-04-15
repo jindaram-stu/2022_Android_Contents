@@ -11,15 +11,11 @@ import android.widget.ImageView;
 
 public class SplashActivity extends AppCompatActivity {
 
-//    Animation cat_anim;
-//    ImageView cat_image;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        // cat_anim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.anim_splash_imageview);
-        // cat_image.findViewById(R.id.cat);
+
 
     }
 
@@ -29,7 +25,7 @@ public class SplashActivity extends AppCompatActivity {
         super.onStart(); // 서브 스레드를 통해 해당 run() 메소드를 onStart() 메소드 시작 2000m/s 이후에 실행한다.
 
 
-//         cat_image.startAnimation(cat_anim);
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
