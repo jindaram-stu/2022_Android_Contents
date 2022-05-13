@@ -5,61 +5,91 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".InitActivity">
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center_horizontal"
-        >
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            >
 
-        <Button
-            android:id="@+id/bt_calculator"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="@string/cal"
-            android:layout_marginTop="30dp"
-            />
+            <Button
+                android:id="@+id/bt_calculator"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="@string/cal"
+                android:layout_marginTop="30dp"
+                />
 
-        <Button
-            android:id="@+id/bt_next"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="NEXT"
-            android:layout_marginTop="30dp"/>
-        <TextView
-            android:id="@+id/tv_value"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="Value : (Empty)"/>
-        <TextView
-            android:id="@+id/tv_from"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="From : (Unknown Activity)"/>
+            <Button
+                android:id="@+id/bt_next"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="NEXT"
+                android:layout_marginTop="30dp"/>
+            <TextView
+                android:id="@+id/tv_value"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="Value : (Empty)"/>
+            <TextView
+                android:id="@+id/tv_from"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="From : (Unknown Activity)"/>
 
-        <Button
-            android:id="@+id/bt_survey"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="survey"
-            android:layout_marginTop="30dp"/>
+            <Button
+                android:id="@+id/bt_survey"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="survey"
+                android:layout_marginTop="30dp"/>
 
-        <Button
-            android:id="@+id/bt_listview"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="GUCCI LIST VIEW"
-            android:layout_marginTop="30dp"/>
+            <Button
+                android:id="@+id/bt_listview"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="GUCCI LIST VIEW"
+                android:layout_marginTop="30dp"/>
 
-        <Button
-            android:id="@+id/bt_sp"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="SHARED PREFERENCES"
-            android:layout_marginTop="30dp"/>
+            <Button
+                android:id="@+id/bt_sp"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="SHARED PREFERENCES"
+                android:layout_marginTop="30dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <Button
+                    android:id="@+id/bt_call"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="CALL"
+                    android:layout_marginTop="30dp"/>
+                <Button
+                    android:id="@+id/bt_data"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="WEB"
+                    android:layout_marginLeft="28dp"
+                    android:layout_marginTop="30dp"/>
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/musicplayer"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="MusicPlayer"
+                android:layout_marginTop="30dp"/>
+        </LinearLayout>
 
 
-
-    </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

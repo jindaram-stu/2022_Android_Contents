@@ -4,6 +4,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,8 +18,9 @@ import com.daelim.survey.BreadActivity;
 public class InitActivity extends AppCompatActivity {
 
     InitActivity activity;
-    Button bt_calculator, bt_next, bt_survey, bt_listView, bt_sp;
+    Button bt_calculator, bt_next, bt_survey, bt_listView, bt_sp, bt_call, bt_data,musicplayer;
     TextView tv_value, tv_from;
+
 
 
     View.OnClickListener click = new View.OnClickListener() {
@@ -46,6 +48,21 @@ public class InitActivity extends AppCompatActivity {
                     Intent spIntent = new Intent(activity, SharedPreferencesActivity.class);
                     startActivity(spIntent);
                     break;
+                case R.id.bt_call:
+                    Intent callIntent = new Intent(Intent.ACTION_DIAL);
+                    callIntent.setData(Uri.parse("tel:01040307996"));
+                    startActivity(callIntent);
+                    break;
+                case R.id.bt_data:
+                    Intent emailIntent = new Intent(activity,WebActivity.class);
+                    startActivity(emailIntent);
+
+                    break;
+                case R.id.musicplayer:
+                    Intent musicIntent = new Intent(activity,MusicPlayerActivity.class);
+                    startActivity(musicIntent);
+
+                    break;
             }
         }
     };
@@ -60,13 +77,18 @@ public class InitActivity extends AppCompatActivity {
         bt_survey = findViewById(R.id.bt_survey);
         bt_listView = findViewById(R.id.bt_listview);
         bt_sp = findViewById((R.id.bt_sp));
-
+        bt_call = findViewById(R.id.bt_call);
+        bt_data = findViewById(R.id.bt_data);
+        musicplayer = findViewById(R.id.musicplayer);
 
         bt_calculator.setOnClickListener(click);
         bt_next.setOnClickListener(click);
         bt_survey.setOnClickListener(click);;
         bt_listView.setOnClickListener(click);
         bt_sp.setOnClickListener(click);
+        bt_call.setOnClickListener(click);
+        bt_data.setOnClickListener(click);
+        musicplayer.setOnClickListener(click);
 
         tv_value = findViewById(R.id.tv_value);
         tv_from = findViewById(R.id.tv_from);
